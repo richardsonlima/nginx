@@ -12,6 +12,6 @@
 
 #### Attach persistent/shared directories
 
-    docker run -d -p 80:80 -v <sites-enabled-dir>:/etc/nginx/conf.d -v <certs-dir>:/etc/nginx/certs -v <log-    docker run --name nginx-dockerfile -itd -p 8080:80 -v ~/dev/php:/var/www/app richardsonlima/nginx-automated-1
+    docker run --name nginx-dockerfile -itd -p 8080:80  -v ~/dev/mywebapp:/var/www/html richardsonlima/nginx-automated-1
 
 After few seconds, open `http://<host>:8080` to see the welcome page.
