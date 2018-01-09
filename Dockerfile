@@ -1,11 +1,11 @@
 #
 # Nginx Dockerfile
 #
-# https://github.com/dockerfile/nginx
+# 
 #
 
 # Pull base image.
-FROM dockerfile/ubuntu
+FROM ubuntu
 
 # Install Nginx.
 RUN \
@@ -21,6 +21,9 @@ VOLUME ["/etc/nginx/sites-enabled", "/etc/nginx/certs", "/etc/nginx/conf.d", "/v
 
 # Define working directory.
 WORKDIR /etc/nginx
+
+#
+#COPY default /etc/nginx/sites-available/default
 
 # Define default command.
 CMD ["nginx"]
